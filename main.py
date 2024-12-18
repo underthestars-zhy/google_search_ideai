@@ -18,5 +18,5 @@ class Item(BaseModel):
     num: int = 10
 
 @app.post("/")
-async def search_google(item: Item) -> list[str]:
+def search_google(item: Item) -> list[str]:
     return search(item.query, num=item.num, stop=20)
