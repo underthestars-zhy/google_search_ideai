@@ -19,4 +19,4 @@ class Item(BaseModel):
 
 @app.post("/")
 def search_google(item: Item) -> list[str]:
-    return search(item.query, num=item.num, stop=20)
+    return search(item.query, num=item.num, stop=item.num)
