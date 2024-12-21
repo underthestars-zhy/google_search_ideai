@@ -9,9 +9,9 @@ username = "geonode_WRVJYKoq40"
 password = "59eb5a54-bbf9-4096-9385-5323b360079f"
 GEONODE_DNS = "us.premium-residential.geonode.com:9000"
 
-# Set proxies as environment variables
-# os.environ["http_proxy"] = f"http://{username}:{password}@{GEONODE_DNS}"
-# os.environ["https_proxy"] = f"https://{username}:{password}@{GEONODE_DNS}"
+Set proxies as environment variables
+os.environ["http_proxy"] = f"http://{username}:{password}@{GEONODE_DNS}"
+os.environ["https_proxy"] = f"https://{username}:{password}@{GEONODE_DNS}"
 
 class Item(BaseModel):
     query: str
