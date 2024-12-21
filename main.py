@@ -19,8 +19,5 @@ class Item(BaseModel):
 
 @app.post("/")
 def search_google(item: Item) -> list[str]:
-    try:
-        results = search(item.query, num=item.num, stop=item.num)
-        return results
-    except Exception as e:
-        return [f"Error occurred: {e}"]
+    results = search(item.query, num=item.num, stop=item.num)
+    return results
